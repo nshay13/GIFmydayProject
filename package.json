@@ -1,0 +1,24 @@
+{
+  "name": "gifmyday",
+  "version": "1.0.0",
+  "description": "Project for UI Design, using the GIPHY API",
+  "main": "login.js",
+  "dependencies": {
+    "giphy-js-sdk-core": "^1.0.6",
+    "sentiment": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankhurikumar23/gifmyday.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankhurikumar23/gifmyday/issues"
+  },
+  "homepage": "https://github.com/pankhurikumar23/gifmyday#readme"
+}

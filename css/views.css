@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: aliceblue;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row2 { 
+	white-space: nowrap;
+	margin-bottom: 25px;
+}
+
+.inline-block { 
+	display: inline-block;
+} 
+
+#title { 
+ 	width: 80%;
+ 	text-align: center;
+}
+
+#logout {
+ 	text-align: right;
+ 	padding-top: 50px;
+ 	padding-right: 40px;
+}
+
+#logout-btn {
+	border: none;
+	background-color: aliceblue;
+	font-family: 'Open Sans', sans-serif;
+	color:#7579ff;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+	border: 1px solid aliceblue;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+#logout-btn:hover {
+	background-color:rgb(195, 202, 207);
+	border: 1px solid rgb(195, 202, 207);
+    color:#7579ff;
+}
+#logout-btn:active {
+    font-family:'Varela Round', sans-serif;
+    color:#7579ff;
+	top:1px;
+	
+}
+
+
+#title-buffer { 
+	width: 10%;
+}
+
+#date { 
+ 	text-align: center;
+ 	width: 20%;
+}
+
+#date-buffer { 
+	width: 20%;
+}
+
+#month-year {
+	width: 100%;
+	text-align: center;
+	padding: 50px;
+}
+
+#day { 
+	width: 25%;
+	text-align: center;
+}
+
+#new-event { 
+	width: 25%;
+	text-align: center;
+}
+
+#prev-day { 
+	width: 50%;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+#next-day {
+	width: 30%;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+#viewbtns1 {
+	width: 50%;
+	text-align: right;
+}
+
+#viewbtns2 {
+	width: 50%;
+	text-align: left;
+}
+
+#table-week, th, td { 
+	border: 1px solid black;
+	width: 13%;
+}
+
+#table-week { 
+	width: 100%;
+}
+
+#table-week td { 
+	height: 150px;
+	text-align: left;
+	vertical-align: text-top;
+	font-weight: bold;
+}
+
+.card {
+    width: 80%;
+}
+
+.card-title {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 2rem;
+}
+
+#months-date {
+	width: 100%;
+	text-align: center;
+}
+
+#calendar, th, td { 
+	border: 1px solid black;
+	width: 13%;
+}
+
+#calendar {
+	width: 100%;
+}
+
+#calendar td {
+	height: 150px;
+	text-align: center;
+	vertical-align: center;
+	font-weight: bold;
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered.black {
+	color: black;
+}
+
+.day-container {
+  position: relative;
+  text-align: center;
+  color: white;
+    font-size: 7rem;
+}
+ 
+ .row {
+    overflow: hidden;
+    background-color:black;
+}
+
+.logobox {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.gifDay {
+    width: 100%;
+}
+
+#viewbtns{
+	text-align: center;
+}
+
+.btn{
+    background-color:#7579ff;
+    font-family:'Varela Round', sans-serif;
+    color:white;
+	margin: 0px;
+	height:50px;
+	width: 80px;
+	border-radius: 8px;
+} 
+.btn:hover {
+    background-color:#363bcc;
+    color:white;
+}
+.btn:active {
+    font-family:'Varela Round', sans-serif;
+    color:white;
+    top:1px;
+}
+
+#addbtnctnr{
+	text-align: left;
+}
+
+#addbutton{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    color: white;
+    text-align:center;
+    vertical-align: center;
+    background: #7579ff;
+    font-size:30px;
+    font-weight:bold;
+} 
+#addbutton:hover {
+    background-color:#363bcc;
+    color:white;
+}
+#addbutton:active {
+    font-family:'Varela Round', sans-serif;
+    color:white;
+    top:1px;
+}
+
+#months-date, #days-month, #days-day, #days-year{
+	font-family:'Varela Round', sans-serif;
+    color: black;
+	top:1px;
+	font-size: 35px;
+	font-weight: bold;
+	display: inline;
+	padding: 6px;
+
+}
+
+
+
+#months-date-container{
+	width: 100%;
+	align-items: center;
+}
+
+#searchMonth {
+	display: flex;
+	justify-content: center;
+}
+th {
+  grid-auto-rows: 50px;
+  align-items: center;
+  text-align: center;
+	text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+}
+#months-btns {
+	text-align: center;
+}
+
+
+

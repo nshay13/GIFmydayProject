@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gifSearchResult {
+    height: 150px;
+}
+
+.gifSelected {
+    width: 100%;
+}
+
+.searchTerm {
+    width: 90%;
+    display:block;
+    margin: 0 0 0 auto;
+    border: 3px solid #7579ff;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(56, 56, 56);
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #7579ff;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7579ff;
+  background: #7579ff;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchButton:hover {
+  background-color:#363bcc;
+  color:white;
+}
+
+.row{
+  width: 100%;
+  position: absolute;
+  top: 15%;
+}
+
+.row2{
+  width: 100%;
+  position: absolute;
+  top: 28%;
+}
+
+.row3 {
+  width: 100%;
+  position: absolute;
+  top: 35%;
+}
+
+.row4 {
+  width: 100%;
+  position: absolute;
+  top: 105%;
+}
+
+#mini-container {
+  background: #7579ff;
+  padding: 15px;
+  height: 400px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+  display: inline-block;
+  left: 2%;
+}
+
+#mini-container2 {
+  background: #7579ff;
+  padding: 15px;
+  width: 27%;
+  height: 700px;
+  margin-left: 4%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#button-container {
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+}
+
+.butt{
+    background-color:#7579ff;
+    border:1px solid #7579ff;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:'Varela Round', sans-serif;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #662828;
+}
+.butt:hover {
+    background-color:#363bcc;
+}
+.butt:active {
+    position:relative;
+    top:1px;
+}
+
+.header {
+    overflow: hidden;
+    background-color:black;
+}
+
+.logobox {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+#entrycontainer {
+  width: 98%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top:5px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 2%;
+  height: 300px;
+}
+
+#entrytime {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 30px;
+  height:50px;
+}
+
+#datelabel {
+  text-align: center;
+  font-size: 30px;
+  height: 50px;
+  color: #7579ff;
+  font-weight: bold;
+}
+
+#btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #7579ff;
+  background: #7579ff;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#btn:hover {
+  background-color:#363bcc;
+  color:white;
+}
+#mytext{
+  font-size: 15px;
+font-weight: bold;
+  
+}

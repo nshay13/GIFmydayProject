@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GIFMyDay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="login_assets/images/icons/gmd.png"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/edit_entry.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="store.everything.min.js"></script>
+    <script src="checkLoggedInStatus.js"></script>
+    <script src="gifcalls.js"></script>
+    <script src="util.js"></script>
+    <script src="manage_entries.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <img class =logobox src="images/gifmyday.png" alt="gmd-logo" width="190;" height="100;">
+    </div>
+    
+    <div class="row">
+        <p id="mytext" style="margin-left:53%">Recording in restrospect? Change time here:</p>
+
+      <div class="col-sm-6" id="datelabel">
+      </div>
+      <div class="col-sm-6">
+        <div class="row5">
+          <div class="col-sm-8">
+            <input type="text" id="entrytime">
+          </div>
+          <div class="col-sm-4">
+            <button onclick="myFunction()" type="button" id="btn">Close</button>
+            <script>
+              function myFunction() {
+                  if (window.confirm("Close without saving?")) { 
+                    window.location.href="days.html";
+                  }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row2">
+        <p id="mytext" style="margin-left:7%">Choose a GIF to match your mood:</p>
+
+      <div class="col-sm-7">
+        <input id="gifSearchTerm" type="text" class="searchTerm" placeholder="Search my mood!">
+      </div>
+      <div class="col-sm-1">
+        <button id="gifSearchButton" type="submit" onclick="displayGifResults()" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+       
+    <div class="row3">
+        <p id="mytext" style="margin-left:71%">Here's your chosen GIF:</p>
+  
+      <div class="col-sm-8">
+        <div id="mini-container" class="col-sm-12">
+        </div>
+        <p id="mytext" style="top:101%;position:absolute;margin-left:2%">Scribble something to remember this moment:</p>
+        <div class="row4">
+          <div id="entrycontainer" class="col-sm-12">
+            <form>
+                <textarea id="entry" placeholder="Write something about your day..." style="height:200px"></textarea>
+                <button id="savebutton" type="button" class="butt" onclick="submitEntry()">SAVE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3" id="mini-container2">
+      </div>
+    </div>
+
+    <script>
+      window.onload = function() {
+        checkLoggedIn()
+        const item = document.getElementById("gifSearchTerm")
+
+        item.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                displayGifResults()
+          }
+        });
+        searchGif('diary')
+
+        var url = document.location.href,
+        params = url.split('?')[1].split('%20');
+        // console.log(params);
+        if (params[0] == 0) {
+            currTime = new Date();
+            document.getElementById("entrytime").value = currTime.getHours()+ ':' + currTime.getMinutes() + ':' + currTime.getSeconds();
+            document.getElementById("datelabel").innerHTML = params[2] + " " + params[3] + " " + params[4];
+        } else {
+            savedTime = params[4].split('%3A');
+            document.getElementById("entrytime").value = savedTime[0] + ':' + savedTime[1] + ':' + savedTime[2];
+            document.getElementById("datelabel").innerHTML = params[1] + " " + params[2] + " " + params[3];
+            populateData(params);
+        }
+      }
+
+      function populateData(params) {
+          currentUser = store.get('currentUser');
+          userData = store.get(currentUser);
+          entries = userData.entries;
+          console.log(userData);
+          enteredTime = document.getElementById("entrytime").value
+          dateStr = document.getElementById("datelabel").innerHTML
+
+          for (i = 0; i < entries.length; i++) {
+              entry = entries[i];
+              entrydate = new Date(entry.date).toString();
+              if (entrydate.includes(dateStr) && entrydate.includes(enteredTime)) {
+                  console.log('Entry exists, populating...');
+                  document.getElementById("entry").value = entry.notes;
+                  chooseGif(entry.gif_data.id);
+                  break;
+              }
+          }
+      }
+    </script>
+  </body>
+</html>
+
